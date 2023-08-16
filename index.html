@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            color: black;
+            background-color: lightgray;
+        }
+        
+
+        .chnge-color button{
+            background-color: rgb(249, 112, 0);
+        }
+    
+        .border {
+            /* border: 2px solid red; */
+            height: 72px;
+        }
+
+        .container {
+        
+border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 40px auto;
+            width: 400px;
+            /* width: 100vw; */
+            height: 450px;
+            border: 4px solid gray;
+            background-color: rgb(49, 48, 48);
+
+        }
+
+        button {
+            height: 50px;
+            width: 80px;
+            /* background-color: #87CEFA; */
+            background-color: rgb(89, 90, 90);
+            color: white;
+            font-size: 30px;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            outline: none;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        button:active {
+            background-color: rgb(49, 48, 48);
+            
+            cursor: pointer;
+        }
+
+        .box1 {
+            width: 365px;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        .box1 input {
+            width: 365px;
+            margin: 0px auto;
+            height: 60px;
+            margin-bottom: 15px;
+            background-color: rgb(49, 48, 48);
+            /* border: 2px solid gray; */
+            border-radius: 5px;
+
+
+        }
+
+        .width-400px {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 400px;
+        }
+
+        .width-305px {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 305px;
+        }
+
+        #equal-to {
+            height: 194px;
+            width: 80px;
+
+        }
+
+        #result {
+            text-align: right;
+            font-size: 60px;
+            color: white;
+        }
+
+        .made-by {
+            height: 20px;
+            color: gray;
+            position: fixed;
+            bottom: 25px;
+            right: 10px;
+        }
+ /* for iPad Air */
+ @media screen and (max-width: 822px) {
+            .container {
+                /* background-color: yellow; */
+                height: 1090px;
+                width: 770px;
+            }
+
+            button {
+                height: 160px;
+                width: 150px;
+                font-size: 60px;
+
+            }
+            .box1 {
+                height: 200px;
+                width: 780px;
+            }
+
+            .box1 input {
+                width: 680px;
+                height: 140px;
+                margin-top: 20px;
+            }
+
+            #equal-to {
+                height: 520px;
+                width: 150px;
+            }
+
+            .width-400px {
+                height: 175px;
+                width: 780px;
+            }
+
+            .width-305px {
+                height: 180px;
+                width: 595px;
+            }
+        } 
+          /* for iPad Air */
+          @media screen and (max-width:770px) {
+            .container {
+                height: 970px;
+                width: 750px;
+            }
+
+            button {
+                height: 140px;
+                width: 140px;
+                font-size: 60px;
+
+
+            }
+            .box1 {
+                height: 220px;
+                width: 780px;
+            }
+
+            .box1 input {
+                width: 680px;
+                height: 130px;
+            }
+
+            #equal-to {
+                height: 470px;
+                width: 140px;
+            }
+
+            .width-400px {
+                height: 175px;
+                width: 760px;
+            }
+
+            .width-305px {
+                height: 190px;
+                width: 580px;
+            }
+            .box2{
+                height: 190px;
+
+            }
+            .box3{
+                height: 200px;
+            }
+        } 
+ 
+         /* for A51/71 */
+         @media screen and (max-width:415px) {
+            .container {
+                /* background-color: blue; */
+                height: 1600px;
+                width: 750px;
+            }
+
+            button {
+                height: 240px;
+                width: 150px;
+                font-size: 60px;
+
+
+            }
+            .box1 {
+                height: 600px;
+                width: 750px;
+                margin-bottom: 30px;
+            }
+
+            .box1 input {
+                width: 690px;
+                height: 180px;
+                margin-top: 90px;
+            }
+
+            #equal-to {
+                height: 770px;
+                width: 150px;
+            }
+
+            .width-400px {
+                height: 380px;
+                width: 760px;
+            }
+
+            .width-305px {
+                height: 310px;
+                width: 579px;
+            }
+            .box2{
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+            .box3{
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+            .box4{
+                margin-bottom: -40px;
+            }
+            .box5{
+                margin-bottom: -50px;
+            }
+            .box6{
+                margin-bottom: 80px;
+            }
+        }  
+
+          /* for iphone SE */
+         @media screen and (max-width:376px) {
+            .container {
+                /* background-color: blueviolet; */
+                height: 660px;
+            }
+
+            button {
+                height: 90px;
+                width: 80px;
+                font-size: 60px;
+
+
+            }
+
+            .box1 {
+                height: 140px;
+            }
+
+            .box1 input {
+                height: 90px;
+            }
+
+            #equal-to {
+                height: 300px;
+                width: 80px;
+            }
+
+            .width-400px {
+                height: 100px;
+            }
+
+            .width-305px {
+                height: 105px;
+            }
+        }
+
+        
+        
+         /* for Galaxy S8+ */
+         @media screen and (max-width: 362px) {
+            .container {
+                /* background-color: green; */
+                height: 1350px;
+                width: 730px;
+
+            }
+
+            button {
+                height: 180px;
+                width: 150px;
+                font-size: 60px;
+
+            }
+
+            .box1 {
+                height: 150px;
+            }
+
+            .box1 input {
+                height: 150px;
+                margin-top: 90px;
+            }
+
+            #equal-to {
+                height: 600px;
+                width: 150px;
+            }
+            
+
+            .width-400px {
+                height: 360px;
+                width: 730px;
+            }
+
+            .width-305px {
+                height: 380px;
+                width: 553px;
+            }
+            .border{
+                height: 330px;
+            }
+        }
+        
+       
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1 border">
+            <input type="text" name="" id="result">
+        </div>
+        <div class="box2 border width-400px chnge-color">
+            <button onclick="operand('+')">+</button>
+            <button onclick="operand('-')">-</button>
+            <button onclick="operand('*')">&times;</button>
+            <button onclick="operand('/')">&divide;</button>
+        </div>
+        <div class="box3 border width-400px">
+            <button onclick="operand('7')">7</button>
+            <button onclick="operand('8')">8</button>
+            <button onclick="operand('9')">9</button>
+            <button onclick="deleteOne()">CE </button>
+        </div>
+        <div class="box4 border width-305px">
+            <button onclick="operand('4')">4</button>
+            <button onclick="operand('5')">5</button>
+            <button onclick="operand('6')">6</button>
+        </div>
+        <div class="box5 border width-400px">
+            <button onclick="operand('1')">1</button>
+            <button onclick="operand('2')">2</button>
+            <button onclick="operand('3')">3</button>
+            <button id="equal-to" onclick="calculate()">=</button>
+
+
+        </div>
+        <div class="box6 border width-305px">
+            <button onclick="operand(0)">0</button>
+            <button onclick="operand('.')">.</button>
+            <button onclick="screenClean()">C</button>
+            <!-- <input type="button" value="C" onclick="screenClean()" id="btn" /> -->
+        </div>
+    </div>
+    <div class="made-by">
+        <h3>Calculator By RWS</h3>
+    </div>
+    <script src="static/calculation.js"></script>
+</body>
+
+</html>
